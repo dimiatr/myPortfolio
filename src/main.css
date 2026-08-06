@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@source "../index.html";
+@source "../privacy.html";
+@source "../script.js";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Caveat", cursive;
+
+  --color-ink: #15110c;
+  --color-ink-soft: #2a2119;
+  --color-paper: #faf6f0;
+  --color-paper-soft: #f1e9dd;
+  --color-primary: #ff5a1f;
+  --color-primary-dark: #c73e10;
+  --color-accent-warm: #ffb703;
+  --color-surface: #1c1611;
+
+  --radius-card: 1.75rem;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 20px 60px -25px rgb(0 0 0 / 0.45);
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-sans); background: var(--color-paper); color: var(--color-ink); }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill bg-primary px-7 py-3.5 font-bold text-paper shadow-card transition duration-300 hover:bg-primary-dark hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill border-2 border-current px-7 py-3.5 font-bold transition duration-300 hover:opacity-70 hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .accent-letter {
+    @apply font-script text-primary text-[1.2em] leading-none align-baseline;
+  }
+  .card {
+    @apply rounded-card bg-white p-7 sm:p-8 shadow-card ring-1 ring-ink/5 flex flex-col;
+  }
+  .card-accent {
+    @apply rounded-card bg-gradient-to-br from-primary to-accent-warm p-7 sm:p-8 text-paper shadow-card flex flex-col;
+  }
+  .capsule {
+    @apply inline-flex items-center gap-2 rounded-pill border border-ink/10 bg-white px-6 py-3 font-bold text-ink shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-card;
+  }
+  .capsule-accent {
+    @apply inline-flex items-center gap-2 rounded-pill border border-transparent bg-gradient-to-br from-primary to-accent-warm px-6 py-3 font-bold text-paper shadow-card transition duration-300 hover:-translate-y-0.5;
+  }
+  .reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  .reveal.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+  .field {
+    @apply w-full rounded-xl border border-ink/10 bg-paper-soft px-4 py-3 text-base text-ink placeholder:text-ink/30 transition duration-300 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20;
+  }
+}

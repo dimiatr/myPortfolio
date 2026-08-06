@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дмитрий Макаров — фронтенд-разработчик</title>
+  <meta name="description"
+    content="Дмитрий Макаров — фронтенд-разработчик. Делаю сайты и лендинги сам, без агентства и посредников. AI ускоряет рутину, за результат отвечаю я.">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Caveat:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="antialiased">
+
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50">
+    <div id="header-bg-mobile"
+      class="pointer-events-none absolute inset-0 bg-ink opacity-0 transition-opacity duration-700 ease-out md:hidden">
+    </div>
+    <div id="header-bg-desktop"
+      class="pointer-events-none absolute inset-0 hidden opacity-0 transition-opacity duration-700 ease-out md:block"
+      style="background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 45%, var(--color-ink)) 0%, var(--color-ink) 55%, color-mix(in srgb, var(--color-accent-warm) 22%, var(--color-ink)) 100%);">
+    </div>
+
+    <nav class="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-5 sm:px-8">
+      <a href="#top">
+        <img class=" h-10" src="img/logo.png" alt="Дмитрий Макаров — фронтенд-разработчик">
+      </a>
+
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="#work" class="text-sm font-semibold text-paper/80 transition hover:text-paper">Кейсы</a>
+        <a href="#about" class="text-sm font-semibold text-paper/80 transition hover:text-paper">Обо мне</a>
+        <a href="#services" class="text-sm font-semibold text-paper/80 transition hover:text-paper">Почему я</a>
+        <a href="#contact" class="text-sm font-semibold text-paper/80 transition hover:text-paper">Заявка</a>
+        <a data-telegram-link href="#" target="_blank" rel="noopener noreferrer"
+          class="btn-outline px-5! py-2.5! text-sm text-paper">Написать в Telegram</a>
+      </div>
+
+      <button id="menu-toggle"
+        class="grid h-10 w-10 place-items-center rounded-pill border border-paper/20 text-paper md:hidden"
+        aria-label="Открыть меню">
+        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="hidden h-5 w-5" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="relative hidden flex-col gap-1 bg-ink/95 px-6 pb-6 pt-2 backdrop-blur md:hidden">
+      <a href="#work" class="rounded-xl px-4 py-3 font-semibold text-paper/90 transition hover:bg-paper/10">Кейсы</a>
+      <a href="#about" class="rounded-xl px-4 py-3 font-semibold text-paper/90 transition hover:bg-paper/10">Обо мне</a>
+      <a href="#services" class="rounded-xl px-4 py-3 font-semibold text-paper/90 transition hover:bg-paper/10">Почему
+        я</a>
+      <a href="#contact"
+        class="rounded-xl px-4 py-3 font-semibold text-paper/90 transition hover:bg-paper/10">Заявка</a>
+      <a data-telegram-link href="#" target="_blank" rel="noopener noreferrer"
+        class="mt-2 rounded-xl bg-primary px-4 py-3 text-center font-bold text-paper">Написать в Telegram</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="relative overflow-hidden bg-ink px-6 pb-20 pt-32 sm:px-8 sm:pt-40">
+      <div class="pointer-events-none absolute inset-0"
+        style="background: radial-gradient(120% 90% at 100% 0%, color-mix(in srgb, var(--color-primary) 55%, transparent) 0%, transparent 55%), radial-gradient(90% 70% at 0% 100%, color-mix(in srgb, var(--color-accent-warm) 25%, transparent) 0%, transparent 60%), var(--color-ink);">
+      </div>
+
+      <div class="relative mx-auto max-w-6xl">
+        <div class="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div>
+            <p
+              class="mb-6 inline-flex items-center gap-2 rounded-pill border border-paper/15 bg-paper/5 px-4 py-2 text-xs font-bold uppercase tracking-widest text-paper/70">
+              Фронтенд-разработчик
+            </p>
+
+            <h1
+              class="max-w-3xl text-5xl font-extrabold leading-[1.05] tracking-tight text-paper sm:text-6xl lg:text-7xl">
+              <span class="accent-letter text-accent-warm">Я</span> делаю сайты<br>
+              и лендинги для тех,<br>
+              кому нужно <span class="accent-letter text-accent-warm">быстро</span>
+            </h1>
+
+            <p class="mt-7 max-w-lg text-lg text-paper/70">
+              Я фронтенд-разработчик. Делаю сайты и лендинги для стартапов, локального бизнеса и личных проектов —
+              там, где нужен рабочий сайт, а не месяцы согласований. AI помогает с черновиками текста и визуала,
+              сборку и качество держу на себе.
+            </p>
+
+            <div class="mt-9 flex flex-wrap items-center gap-4">
+              <a data-telegram-link href="#" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                Обсудим в Telegram
+              </a>
+              <a href="#work" class="btn-outline text-paper">
+                Смотреть кейсы
+              </a>
+            </div>
+            <p class="mt-4 text-sm text-paper/50">Можно просто написать — ни к чему не обязывает.</p>
+          </div>
+
+          <div class="flex gap-8 border-t border-paper/10 pt-6 lg:border-t-0 lg:border-l lg:pl-8 lg:pt-0">
+            <div>
+              <p class="text-3xl font-extrabold text-paper">Прозрачно</p>
+              <p class="mt-1 max-w-[9rem] text-sm text-paper/60">показываю макет и структуру до вёрстки</p>
+            </div>
+            <div>
+              <p class="text-3xl font-extrabold text-paper">Гибко</p>
+              <p class="mt-1 max-w-[9rem] text-sm text-paper/60">меняем детали по ходу, без формальных заявок</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="px-6 py-24 sm:px-8">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal mb-12 max-w-xl">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Почему <span class="accent-letter">я</span>, а не агентство
+          </h2>
+          <p class="mt-3 text-ink/60">Агентство — это несколько человек и время на передачу задачи между ними. Здесь
+            один человек ведёт проект от начала до конца — меньше слоёв, меньше шанс, что что-то потеряется по
+            дороге.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
+          <article class="reveal card lg:col-span-2 lg:row-span-2 justify-between">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary/40" fill="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                d="M9.5 7C6.5 7 4 9.5 4 12.5S6.5 18 9.5 18c1 0 1.5-1 1-2-2-1-3-2.5-3-4.5 0-1.7 1.3-3 3-3 .8 0 1.3-1 .7-1.8C10.6 5.9 9.9 7 9.5 7Zm9 0c-3 0-5.5 2.5-5.5 5.5S15.5 18 18.5 18c1 0 1.5-1 1-2-2-1-3-2.5-3-4.5 0-1.7 1.3-3 3-3 .8 0 1.3-1 .7-1.8C19.6 5.9 18.9 7 18.5 7Z" />
+            </svg>
+            <p class="mt-6 text-xl font-semibold leading-snug text-ink sm:text-2xl">
+              «Понравилось, что не пришлось пересказывать задачу трём разным людям — просто написал в Telegram, и мы
+              сразу начали работать»
+            </p>
+            <p class="mt-6 text-sm font-semibold text-ink/50">— из переписки с клиентом, digital-продукт</p>
+          </article>
+
+          <article class="reveal card-accent">
+            <p class="text-5xl font-extrabold">0</p>
+            <p class="mt-3 text-sm font-semibold text-paper/90">отговорок: если что-то не так — это моя
+              ответственность, а не «менеджер не передал»</p>
+          </article>
+
+          <article class="reveal card">
+            <p class="text-sm font-bold uppercase tracking-widest text-ink/40">Бюджет</p>
+            <p class="mt-4 text-lg font-semibold leading-snug">Без наценки за агентство — платите за работу, которую
+              видите в проекте</p>
+          </article>
+
+          <article class="reveal card lg:col-span-2">
+            <p class="text-sm font-bold uppercase tracking-widest text-ink/40">Гибкость</p>
+            <p class="mt-4 text-lg font-semibold leading-snug">Захотелось поменять блок или текст после сдачи? Просто
+              пишете — без нового ТЗ и согласований</p>
+          </article>
+
+          <article class="reveal card">
+            <p class="text-sm font-bold uppercase tracking-widest text-ink/40">Контроль</p>
+            <p class="mt-4 text-lg font-semibold leading-snug">Каждый экран прохожу сам, от макета до финальной
+              проверки — ничего не уходит «как получится»</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="px-6 py-20 sm:px-8">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal mb-12 max-w-xl">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Как проходит <span class="accent-letter">р</span>абота
+          </h2>
+          <p class="mt-3 text-ink/60">Пять шагов, один и тот же человек на каждом — без замены дизайнера на
+            верстальщика на полпути.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          <article class="reveal card">
+            <span class="text-xs font-extrabold text-primary">01</span>
+            <p class="mt-3 text-sm font-bold">Бриф</p>
+            <p class="mt-2 text-sm text-ink/60">Списываемся или созваниваемся, чтобы разобраться, что должен делать
+              сайт и для кого он.</p>
+          </article>
+          <article class="reveal card">
+            <span class="text-xs font-extrabold text-primary">02</span>
+            <p class="mt-3 text-sm font-bold">Структура</p>
+            <p class="mt-2 text-sm text-ink/60">Раскладываю лендинг по смыслу: что человек видит сначала, что —
+              потом, и что должно его убедить.</p>
+          </article>
+          <article class="reveal card">
+            <span class="text-xs font-extrabold text-primary">03</span>
+            <p class="mt-3 text-sm font-bold">Дизайн</p>
+            <p class="mt-2 text-sm text-ink/60">Собираю визуальное направление — цвет, шрифты, композицию — и
+              показываю, прежде чем сажусь верстать.</p>
+          </article>
+          <article class="reveal card">
+            <span class="text-xs font-extrabold text-primary">04</span>
+            <p class="mt-3 text-sm font-bold">Разработка</p>
+            <p class="mt-2 text-sm text-ink/60">Верстаю, настраиваю адаптивность и анимации, подключаю форму и всё,
+              что должно работать.</p>
+          </article>
+          <article class="reveal card">
+            <span class="text-xs font-extrabold text-primary">05</span>
+            <p class="mt-3 text-sm font-bold">Запуск</p>
+            <p class="mt-2 text-sm text-ink/60">Публикуем, проверяем на разных устройствах и договариваемся, как быть
+              с правками дальше.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ink px-6 py-20 sm:px-8">
+      <div class="reveal mx-auto max-w-6xl">
+        <p class="accent-letter text-5xl text-accent-warm sm:text-6xl">Давайте познакомимся.</p>
+        <p class="mt-8 text-2xl font-medium leading-relaxed text-paper/80 sm:text-[28px] sm:leading-relaxed">
+          Я Дмитрий. Не собираю сайты по шаблону с новым логотипом сверху — сначала <span
+            class="font-extrabold text-paper">вникаю, зачем он вообще нужен</span>, и только потом сажусь за макет.
+          <span class="font-extrabold text-accent-warm">AI забирает часть черновой работы</span>, но что оставить, а
+          что переписать — решаю сам, глядя на то, что получилось.
+        </p>
+      </div>
+    </section>
+
+    <section class="px-6 py-16 sm:px-8">
+      <div class="mx-auto max-w-6xl">
+        <p class="reveal mb-8 text-sm font-bold uppercase tracking-widest text-ink/40">Чем занимаюсь</p>
+        <div class="reveal flex flex-wrap gap-4">
+          <span class="capsule-accent">Frontend-разработка</span>
+          <span class="capsule">AI-контент</span>
+          <span class="capsule">Лендинги</span>
+          <span class="capsule">Автоматизация</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="px-6 pb-20 sm:px-8">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal mb-12 max-w-xl">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            <span class="accent-letter">К</span>ейсы
+          </h2>
+          <p class="mt-3 text-ink/60">Практические проекты, которые довёл до рабочего результата — от макета до
+            кода.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <article class="reveal group overflow-hidden rounded-card bg-white shadow-card ring-1 ring-ink/5">
+            <img src="img/cases/smallshop.jpg" alt="Интернет-магазин на React"
+              class="h-48 w-full object-cover transition duration-500 group-hover:scale-105">
+            <div class="p-7">
+              <h3 class="text-lg font-bold">Интернет-магазин на React</h3>
+              <p class="mt-3 text-sm text-ink/60"><span class="font-semibold text-ink">Задача:</span> разобраться с
+                React на практике — каталог, избранное, корзина, роутинг между страницами</p>
+              <p class="mt-1.5 text-sm text-ink/60"><span class="font-semibold text-ink">Как решил:</span> собрал на
+                React, Vite и Tailwind, состояние корзины и избранного — через Context API и localStorage</p>
+              <div class="mt-5 flex gap-5 text-sm font-semibold">
+                <a href="https://dimiatr.github.io/smallShop/" target="_blank" rel="noopener noreferrer"
+                  class="text-primary transition hover:opacity-70">Demo</a>
+                <a href="https://github.com/dimiatr/smallShop" target="_blank" rel="noopener noreferrer"
+                  class="text-ink/50 transition hover:text-ink">Код</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal group overflow-hidden rounded-card bg-white shadow-card ring-1 ring-ink/5">
+            <img src="img/cases/greencorp.jpg" alt="Лендинг для продажи солнечных панелей"
+              class="h-48 w-full object-cover transition duration-500 group-hover:scale-105">
+            <div class="p-7">
+              <h3 class="text-lg font-bold">Лендинг для продажи солнечных панелей</h3>
+              <p class="mt-3 text-sm text-ink/60"><span class="font-semibold text-ink">Задача:</span> собрать
+                продающий лендинг с нуля — от статичной вёрстки до интерактива</p>
+              <p class="mt-1.5 text-sm text-ink/60"><span class="font-semibold text-ink">Как решил:</span> добавил
+                анимированные счётчики клиентов, интерактивную шапку со скролл-эффектами и форму заявки с выбором
+                бюджета</p>
+              <div class="mt-5 flex gap-5 text-sm font-semibold">
+                <a href="https://dimiatr.github.io/green_corp_landing_1/" target="_blank" rel="noopener noreferrer"
+                  class="text-primary transition hover:opacity-70">Demo</a>
+                <a href="https://github.com/dimiatr/green_corp_landing_1" target="_blank" rel="noopener noreferrer"
+                  class="text-ink/50 transition hover:text-ink">Код</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal group overflow-hidden rounded-card bg-white shadow-card ring-1 ring-ink/5">
+            <img src="img/cases/inkhouse.jpg" alt="Каталог-магазин репродукций картин"
+              class="h-48 w-full object-cover transition duration-500 group-hover:scale-105">
+            <div class="p-7">
+              <h3 class="text-lg font-bold">Каталог-магазин репродукций картин</h3>
+              <p class="mt-3 text-sm text-ink/60"><span class="font-semibold text-ink">Задача:</span> сделать
+                мультиязычный каталог товаров с фильтрацией и корзиной</p>
+              <p class="mt-1.5 text-sm text-ink/60"><span class="font-semibold text-ink">Как решил:</span> сверстал
+                на HTML и JS, добавил переключение каталога между языками и поправил баги в отображении товаров</p>
+              <div class="mt-5 flex gap-5 text-sm font-semibold">
+                <a href="https://dimiatr.github.io/inkHouse/" target="_blank" rel="noopener noreferrer"
+                  class="text-primary transition hover:opacity-70">Demo</a>
+                <a href="https://github.com/dimiatr/inkHouse" target="_blank" rel="noopener noreferrer"
+                  class="text-ink/50 transition hover:text-ink">Код</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="px-6 py-24 sm:px-8">
+      <div class="reveal mx-auto grid max-w-6xl gap-12 md:grid-cols-[1fr_2fr] lg:items-start">
+        <img src="img/photo.jpg" alt="Дмитрий Макаров"
+          class="aspect-3/4 w-full rounded-card object-cover shadow-card max-h-96 lg:max-h-none">
+        <div>
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            <span class="accent-letter">О</span>бо мне
+          </h2>
+          <p class="mt-5 max-w-2xl text-lg text-ink/70">
+            Не обещаю того, чего не смогу сделать, и говорю сразу, если идея не сработает — даже если это не то, что
+            хочется услышать. Если берусь за проект, довожу его до конца: не пропадаю на середине и не переключаюсь
+            на что-то более интересное.
+          </p>
+
+          <ul class="mt-8 grid gap-4 lg:grid-cols-3">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 grid h-5 w-5 flex-shrink-0 place-items-center rounded-full bg-primary/10 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm text-ink/70">Держу в курсе по ходу работы — не пропадаю на две недели с
+                сообщением «почти готово»</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 grid h-5 w-5 flex-shrink-0 place-items-center rounded-full bg-primary/10 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm text-ink/70">Не сдаю проект, который мне самому не нравится — если что-то не
+                получилось, переделываю</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 grid h-5 w-5 flex-shrink-0 place-items-center rounded-full bg-primary/10 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm text-ink/70">После запуска не пропадаю — можно написать, если что-то нужно
+                поправить</span>
+            </li>
+          </ul>
+
+          <a data-telegram-link href="#" target="_blank" rel="noopener noreferrer" class="btn-primary mt-9">
+            Написать мне в Telegram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="px-6 py-24 sm:px-8">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal mb-10 max-w-xl">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Оставить <span class="accent-letter">з</span>аявку
+          </h2>
+          <p class="mt-3 text-ink/60">Расскажите о задаче в двух словах — и посмотрим, подходит ли это друг другу.</p>
+          <p class="mt-1 text-xs text-ink/40">Данные нужны только для ответа — никуда больше не уходят.</p>
+        </div>
+
+        <form id="contact-form" class="reveal card gap-5">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <label class="flex flex-col gap-2 text-sm font-semibold text-ink/70">
+              Имя
+              <input type="text" name="name" required autocomplete="name" maxlength="100" class="field"
+                placeholder="Как к вам обращаться">
+            </label>
+            <label class="flex flex-col gap-2 text-sm font-semibold text-ink/70">
+              Telegram или email
+              <input type="text" name="contact" required autocomplete="email" maxlength="100" class="field"
+                placeholder="@username или почта">
+            </label>
+          </div>
+
+          <label class="flex flex-col gap-2 text-sm font-semibold text-ink/70">
+            О проекте
+            <textarea name="message" required rows="4" maxlength="2000" class="field resize-y"
+              placeholder="Что нужно сделать и в какие сроки"></textarea>
+          </label>
+
+          <input type="text" name="website" tabindex="-1" autocomplete="off"
+            class="absolute left-[-9999px] h-0 w-0 opacity-0" aria-hidden="true">
+
+          <label class="flex items-start gap-3 text-sm text-ink/70">
+            <input type="checkbox" id="consent-checkbox" name="consent" required
+              class="mt-1 h-4 w-4 flex-shrink-0 rounded border-ink/20 accent-primary">
+            Даю согласие на обработку персональных данных в соответствии с
+            <a href="privacy.html" target="_blank" rel="noopener noreferrer"
+              class="font-semibold text-ink underline decoration-ink/30 underline-offset-2 transition hover:text-primary">Политикой
+              обработки персональных данных</a>
+          </label>
+
+          <button type="submit" id="contact-submit" disabled
+            class="btn-primary mt-2 self-start disabled:cursor-not-allowed disabled:opacity-60">
+            Отправить заявку
+          </button>
+
+          <p id="contact-status" class="text-sm font-semibold" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="relative overflow-hidden bg-ink pt-16">
+    <div class="pointer-events-none select-none px-4 text-center">
+      <p class="whitespace-nowrap text-[18vw] font-extrabold leading-none tracking-tighter text-paper/5 sm:text-[15vw]">
+        artDev
+      </p>
+    </div>
+
+    <div
+      class="relative mx-auto flex max-w-6xl flex-col gap-6 border-t border-paper/10 px-6 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+      <p class="text-sm text-paper/50">© 2026 Дмитрий Макаров. Все права защищены.</p>
+      <div class="flex items-center gap-6 text-sm font-semibold">
+        <a data-telegram-link href="#" target="_blank" rel="noopener noreferrer"
+          class="text-paper/70 transition hover:text-paper">
+          <span data-telegram-text>Telegram</span>
+        </a>
+        <a data-email-link href="#" class="text-paper/70 transition hover:text-paper">
+          <span data-email-text>Email</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
