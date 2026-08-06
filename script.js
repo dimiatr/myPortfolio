@@ -54,6 +54,8 @@ const contactForm = document.getElementById('contact-form');
 const contactSubmit = document.getElementById('contact-submit');
 const contactStatus = document.getElementById('contact-status');
 const consentCheckbox = document.getElementById('consent-checkbox');
+const contactFormLoadedAt = Date.now();
+const MIN_SUBMIT_DELAY_MS = 1500;
 
 consentCheckbox.addEventListener('change', () => {
   contactSubmit.disabled = !consentCheckbox.checked;
@@ -63,6 +65,7 @@ contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   if (!consentCheckbox.checked) return;
+  if (Date.now() - contactFormLoadedAt < MIN_SUBMIT_DELAY_MS) return;
 
   const formData = new FormData(contactForm);
 
@@ -72,6 +75,7 @@ contactForm.addEventListener('submit', async (e) => {
     name: formData.get('name'),
     contact: formData.get('contact'),
     message: formData.get('message'),
+    website: formData.get('website'),
     consent: consentCheckbox.checked,
   };
 
