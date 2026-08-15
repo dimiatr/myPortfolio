@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://artdev-mds.vercel.app/sitemap.xml
